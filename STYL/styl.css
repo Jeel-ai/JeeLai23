@@ -1,6 +1,7 @@
+/* ===== GLOBAL ===== */
 body {
-  color: aliceblue;
   background-color: #000;
+  color: aliceblue;
   letter-spacing: 2px;
   font-family: vlastni, sans-serif;
 }
@@ -25,10 +26,10 @@ img {
   z-index: 1000;
 }
 
-/* BLUE TOGGLER */
 .navbar-toggler {
   border: 2px solid #5de0e6;
   box-shadow: 0 0 10px #5de0e6;
+  text-align: right;
 }
 
 .navbar-toggler-icon {
@@ -36,19 +37,21 @@ img {
 }
 
 /* ===== SECTIONS ===== */
-.timer, .dotaznik {
+.timer,
+.dotaznik {
   background-color: #000;
 }
 
-.vystava, .recenze {
-  background-image: radial-gradient(circle at center,#0300b9,#000000);
+.vystava,
+.recenze {
+  background: radial-gradient(circle at center, #0300b9, #000);
 }
 
 .kontakty {
-  background-image: linear-gradient(to bottom,#000000, #0300b9);
+  background: linear-gradient(to bottom, #000, #0300b9);
 }
 
-/* ===== FULL WIDTH BANNER ===== */
+/* ===== BANNER ===== */
 .banner {
   width: 100%;
   min-height: 60vh;
@@ -56,19 +59,26 @@ img {
   align-items: center;
   justify-content: center;
 
-  background-image: url(../obrazky/Banner.png);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
-  margin: 0;
-  padding: 0;
+  background: url(../obrazky/Banner.png) center/cover no-repeat;
 }
 
-/* ===== GLOW TEXT ===== */
+.banner p {
+  max-width: 600px;
+  margin: auto;
+  font-size: 18px;
+}
+
+.logo {
+  width: 80%;
+  max-width: 500px;
+  margin: auto;
+  display: block;
+  margin-top: 2cm;
+}
+
+/* ===== TEXT EFFECT ===== */
 .glow {
   font-size: 80px;
-  text-align: center;
   animation: glow 1s ease-in-out infinite alternate;
 }
 
@@ -78,107 +88,77 @@ img {
 }
 
 /* ===== HEADINGS ===== */
-h2, .dropdown-m4 {
+h2 {
   font-size: 72px;
   font-weight: bold;
-  background-image: radial-gradient(circle at center,#5de0e6,#004aad);
+  background: radial-gradient(circle, #5de0e6, #004aad);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 /* ===== BOX ===== */
 .box {
-  padding: 1%;
+  padding: 1rem;
   border-radius: 30px;
+  text-align: center;
+
   border: 3px solid transparent;
   background:
-    radial-gradient(circle at center,#0300b9,#000000) padding-box,
-    radial-gradient(circle at center,#5de0e6,#004aad) border-box;
-  text-align: center;
+    radial-gradient(circle at center, #0300b9, #000) padding-box,
+    radial-gradient(circle at center, #5de0e6, #004aad) border-box;
 }
 
 /* ===== CARD ===== */
 .card {
-  background:
-    radial-gradient(circle at center, #0300b9, #000000) padding-box,
-    radial-gradient(circle at center, #5de0e6, #004aad) border-box;
-  border: 3px solid transparent;
   color: #fff;
   border-radius: 20px;
   padding: 20px;
-  transition: 0.6s;
   text-align: center;
-  
-  width: 100%;
+
+  border: 3px solid transparent;
+  background:
+    radial-gradient(circle at center, #0300b9, #000) padding-box,
+    radial-gradient(circle at center, #5de0e6, #004aad) border-box;
+
   max-width: 350px;
   margin: auto;
-
-}
-
-.card:hover {
-  transform: scale(1.05);
-  filter: hue-rotate(180deg);
+  transition: 0.4s;
 }
 
 .card-img-top {
   padding: 20px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
-.banner1 {
-  max-width: 600px;
-  margin: auto;
-}
-
-.banner p {
-  max-width: 600px;
-  margin: auto;
-  font-size: 18px;
-}
-
-/* ===== BUTTON HOVER ===== */
-button:hover {
-  background-image: radial-gradient(circle at center,#5de0e6,#004aad);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-/* ===== RESPONSIVE ===== */
-@media (max-width: 768px) 
-{
-  h2 { font-size: 40px; }
-  .glow { font-size: 40px; }
+/* ===== STARS ===== */
+.stars {
+  color: #F5B027;
+  font-size: 20px;
+  margin-bottom: 10px;
 }
 
 /* ===== ACCORDION ===== */
-
 .accordion-item {
   background: none !important;
   border: none !important;
-  margin: 0;
   border-radius: 2.5rem;
   overflow: hidden;
 }
 
-.accordion-button {
-  background:
-    radial-gradient(circle at center, #0300b9, #000000) padding-box,
-    radial-gradient(circle at center, #5de0e6, #004aad) border-box !important;
-  border: 3px solid transparent !important;
-  color: #fff !important;
-  border-radius: 2.5rem !important;
-  font-size: 2rem;
-  box-shadow: none !important;
-  background-color: transparent !important;
+select.custom-input {
+  appearance: none;
 }
 
-.accordion-button,
-.accordion-button:focus,
-.accordion-button:hover,
-.accordion-button:not(.collapsed) {
+.accordion-button {
+  font-size: 2rem;
   color: #fff !important;
-  -webkit-text-fill-color: #fff !important;
+  border-radius: 2.5rem !important;
+
+  border: 3px solid transparent !important;
+  background:
+    radial-gradient(circle at center, #0300b9, #000) padding-box,
+    radial-gradient(circle at center, #5de0e6, #004aad) border-box !important;
+
+  box-shadow: none !important;
 }
 
 .accordion-button::after {
@@ -187,68 +167,137 @@ button:hover {
 
 .accordion-collapse {
   background: linear-gradient(90deg, #004aad, #0085ff);
-  border-radius: 0 0 2.5rem 2.5rem;
-  box-shadow: inset 0 0 12px #0093ff;
 }
 
 .accordion-body {
   background-color: #000;
-  border-radius: 0 0 2.5rem 2.5rem;
   color: aliceblue;
   padding: 1rem 2rem;
 }
 
-/* ===== TABLE ===== */
-table {
-  border-radius: 30px;
-  border: 4px solid transparent;
-  background:
-    radial-gradient(circle at center, #0300b9, #000000) padding-box,
-    radial-gradient(circle at center, #5de0e6, #004aad) border-box;
-  text-align: center;
-  margin: 50px auto;
-  border-collapse: separate;
-}
-
-td {
-  padding: 20px;
-  color: white;
-}
-
-input, select {
+/* ===== FORM ===== */
+input,
+select {
   width: 100%;
   background: transparent;
   border: none;
   color: #fff;
   text-align: center;
-  padding: 8px;
+  padding: 10px;
 }
 
-input:focus, select:focus {
+input:focus,
+select:focus {
   outline: none;
   box-shadow: 0 0 10px #5de0e6;
 }
 
 .submit-btn {
-  display: block;
   margin: 20px auto;
   padding: 10px 30px;
   border-radius: 30px;
   border: 2px solid #5de0e6;
   background: transparent;
   color: #fff;
+  transition: 0.3s;
+}
+
+/* ===== RATING ===== */
+.rating {
+  direction: rtl;
+  unicode-bidi: bidi-override;
+}
+
+.rating input {
+  display: none;
+}
+
+.rating label {
+  font-size: 30px;
+  color: gray;
+  cursor: pointer;
+}
+
+.rating input:checked ~ label,
+.rating label:hover,
+.rating label:hover ~ label {
+  color: #F5B027;
+}
+
+/* ===== CAROUSEL ===== */
+.banner1 {
+  max-width: 600px;
+  margin: auto;
+}
+
+/* ===== SPACING ===== */
+.mezera {
+  height: 4cm;
+}
+
+/* ===== HOVER EFFECTS ===== */
+a,
+button,
+.card,
+.accordion-button {
+  transition: 0.4s;
+}
+
+a:hover,
+button:hover {
+  color: #F5B027 !important;
+  text-shadow: 0 0 10px #F5B027;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px #F5B027;
+}
+
+.accordion-button:hover {
+  box-shadow: 0 0 15px #F5B027;
 }
 
 .submit-btn:hover {
-  box-shadow: 0 0 15px #5de0e6;
+  box-shadow: 0 0 15px #F5B027;
 }
 
-.mezera
-{
-  height: 4cm;
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  h2 {
+    font-size: 40px;
+  }
+
+  .glow {
+    font-size: 40px;
+  }
+
+  .accordion-button {
+    font-size: 1.2rem;
+    padding: 10px;
+  }
+
+  .accordion-body {
+    font-size: 14px;
+    padding: 10px;
+  }
 }
-.logo
-{
-  margin-left: auto;
-  margin-right: auto;
+
+/* ===== SCROLL ===== */
+html {
+  scroll-behavior: smooth;
+}
+
+.custom-input {
+  border-radius: 30px !important;
+  border: 2px solid #5de0e6 !important;
+  background: transparent !important;
+  color: #fff !important;
+  text-align: center;
+  padding: 10px;
+}
+
+.custom-input:focus {
+  box-shadow: 0 0 12px #27005d;
+  border-color: #0a0d60;
 }
