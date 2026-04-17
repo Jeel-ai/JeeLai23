@@ -15,7 +15,7 @@
 <!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg navbar-dark">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Kosmasovo muzeum</a>
+    Kosmasovo muzeum
 
     <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
       <span class="navbar-toggler-icon"></span>
@@ -47,7 +47,7 @@
 <div class="banner text-center">
   <div class="container">
 
-    <img src="../muzeum/obrazky/LOGO.png" class="logo">
+    <img src="obrazky/LOGO.png" class="logo">
     
     <div class="mezera"></div>
 
@@ -81,156 +81,219 @@
 Lorem ipsum...
 
 <!-- TIMER -->
-<div class="timer p-4">
-  <div class="box"><h2>čas</h2></div>
+<div class="box">
+  <h2 id="countdown">--:--:--</h2>
 </div>
-
-</div>
-
 
 <div class="dotaznik p-3">
-<!-- ACCORDION -->
-<div class="box">
+  <div class="container">
 
-<div class="accordion m-4" id="accordionExample">
+    <!-- 🔥 JEDEN SPOLEČNÝ VNĚJŠÍ BOX -->
+    <div class="box p-3">
+      <div class="row g-4">
 
-  <div class="accordion-item">
-    <h3 class="accordion-header">
-      <button class="accordion-button collapsed" type="button"
-        data-bs-toggle="collapse" data-bs-target="#item1">
-        FAQ
-      </button>
-    </h3>
-    <div id="item1" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-      <div class="accordion-body">
+        <!-- 1️⃣ FAQ -->
+<div class="col-12 col-md-6 col-lg-4">
+  <div class="accordion" id="accordionFAQ">
 
-        <div class="accordion" id="faqAccordion">
+    <div class="accordion-item">
+      <h3 class="accordion-header">
+        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faqMain">
+          FAQ
+        </button>
+      </h3>
 
-          <div class="accordion-item">
-            <h3 class="accordion-header">
+      <div id="faqMain" class="accordion-collapse collapse">
+        <div class="accordion-body">
+
+          <div class="accordion" id="faqAccordion">
+
+            <!-- 1 -->
+            <div class="accordion-item">
               <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq1">
                 Co je Kosmasovo muzeum?
               </button>
-            </h3>
-            <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-              <div class="accordion-body">
-                Kosmasovo muzeum je interaktivní prostor, který ukazuje, jak vzniká historie a příběhy národa. Není to klasické muzeum – návštěvníci se aktivně zapojují a tvoří vlastní vyprávění.
+              <div id="faq1" class="accordion-collapse collapse">
+                <div class="accordion-body">
+                  Interaktivní muzeum příběhů.
+                </div>
               </div>
             </div>
-          </div>
-        
-          <div class="accordion-item">
-            <h3 class="accordion-header">
+
+            <!-- 2 -->
+            <div class="accordion-item">
               <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq2">
                 Kdo byl Kosmas?
               </button>
-            </h3>
-            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-              <div class="accordion-body">
-                Kosmas byl první významný český kronikář. Ve své kronice spojoval historická fakta s legendami a vytvořil tak základ českého národního příběhu.
+              <div id="faq2" class="accordion-collapse collapse">
+                <div class="accordion-body">
+                  Český kronikář.
+                </div>
               </div>
             </div>
-          </div>
-        
-          <div class="accordion-item">
-            <h3 class="accordion-header">
+
+            <!-- 3 -->
+            <div class="accordion-item">
               <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq3">
+                Kdy je muzeum otevřené?
+              </button>
+              <div id="faq3" class="accordion-collapse collapse">
+                <div class="accordion-body">
+                  Každý den od 9:00 do 18:00.
+                </div>
+              </div>
+            </div>
+
+            <!-- 4 -->
+            <div class="accordion-item">
+              <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq4">
+                Kolik stojí vstup?
+              </button>
+              <div id="faq4" class="accordion-collapse collapse">
+                <div class="accordion-body">
+                  Základní vstupné je 150 Kč.
+                </div>
+              </div>
+            </div>
+
+            <!-- 5 -->
+            <div class="accordion-item">
+              <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq5">
                 Je muzeum vhodné pro děti?
               </button>
-            </h3>
-            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-              <div class="accordion-body">
-                Ano, muzeum je navrženo tak, aby bylo zábavné i edukativní pro všechny věkové skupiny. Interaktivní prvky zaujmou děti i dospělé.
+              <div id="faq5" class="accordion-collapse collapse">
+                <div class="accordion-body">
+                  Ano, expozice je interaktivní a vhodná pro všechny věkové kategorie.
+                </div>
               </div>
             </div>
+
           </div>
-        
-          <div class="accordion-item">
-            <h3 class="accordion-header">
-              <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq4">
-                V čem je muzeum jiné než ostatní?
-              </button>
-            </h3>
-            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-              <div class="accordion-body">
-                Na rozdíl od tradičních muzeí se zaměřujeme na zážitek a interaktivitu. Návštěvníci nejsou jen diváci – stávají se součástí příběhu.
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+  <!-- 2️⃣ REZERVACE -->
+<div class="col-12 col-md-6 col-lg-4">
+  <div class="accordion" id="accordionRez">
+
+    <div class="accordion-item">
+      <h3 class="accordion-header">
+        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#rezMain">
+          Rezervace
+        </button>
+      </h3>
+
+      <div id="rezMain" class="accordion-collapse collapse">
+        <div class="accordion-body">
+
+          <!-- FORM -->
+          <form class="container" onsubmit="confirmRezervace(event)">
+            <div class="row g-2">
+
+              <div class="col-12">
+                <input type="text" class="form-control custom-input" placeholder="Jméno">
+              </div>
+
+              <div class="col-12">
+                <input type="text" class="form-control custom-input" placeholder="Příjmení">
+              </div>
+
+              <div class="col-12">
+                <input type="datetime-local" class="form-control custom-input">
+              </div>
+
+              <div class="col-12">
+                <input type="number" class="form-control custom-input" placeholder="Počet lidí">
+              </div>
+
+              <div class="col-12">
+                <input type="email" class="form-control custom-input" placeholder="Email">
+              </div>
+
+              <div class="col-12 text-center">
+                <button type="submit" class="submit-btn">Odeslat</button>
+              </div>
+
+            </div>
+          </form>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- 🔵 MODAL 1: POTVRZENÍ -->
+<div class="modal fade" id="confirmModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5 class="modal-title">Potvrzení rezervace</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+        Jste si jisti, že chcete odeslat rezervaci?
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn btn-secondary" data-bs-dismiss="modal">Ne</button>
+        <button class="btn btn-success" onclick="sendRezervace()">Ano</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- 🟢 MODAL 2: VÝSLEDEK -->
+<div class="modal fade" id="rezModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5 class="modal-title">Rezervace odeslána</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body" id="rezModalBody"></div>
+
+    </div>
+  </div>
+</div>
+
+        <!-- 3️⃣ KONTAKT -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="accordion" id="accordionKontakt">
+
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#kontaktMain">
+                  Kontakt
+                </button>
+              </h3>
+
+              <div id="kontaktMain" class="accordion-collapse collapse">
+                <div class="accordion-body">
+                  <p>Email: info@muzeum.cz</p>
+                  <p>Telefon: +420 123 456 789</p>
+                </div>
               </div>
             </div>
+
           </div>
-        
-          <div class="accordion-item">
-            <h3 class="accordion-header">
-              <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq5">
-                Co si z návštěvy odnesu?
-              </button>
-            </h3>
-            <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-              <div class="accordion-body">
-                Odnesete si nový pohled na historii, pochopení rozdílu mezi fakty a interpretací a možná i vlastní příběh, který si vytvoříte během návštěvy.
-              </div>
-            </div>
-          </div>
-        
         </div>
 
       </div>
     </div>
-  </div>
 
-  <div class="accordion-item">
-    <h3 class="accordion-header">
-      <button class="accordion-button collapsed" type="button"
-        data-bs-toggle="collapse" data-bs-target="#item2">
-        Rezervace
-      </button>
-    </h3>
-    <div id="item2" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-      <div class="accordion-body">
-            <form>
-              <table>
-              <tr>
-                <td>Jméno</td>
-                <td><input type="text" value="Honza"></td>
-              </tr>
-              <tr>
-                <td>Příjmení</td>
-                <td><input type="text"></td>
-              </tr>
-              <tr>
-                <td>Datum</td>
-                <td><input type="datetime-local"></td>
-              </tr>
-              <tr>
-                <td>Počet lidí</td>
-                <td><input type="number"></td>
-              </tr>
-              <tr>
-                <td>Výběr</td>
-                <td>
-                  <select>
-                    <option>A</option>
-                    <option>B</option>
-                    <option>C</option>
-                  </select>
-                </td>
-              </tr>
-              <tr>
-                <td>Email</td>
-                <td><input type="email"></td>
-              </tr>
-              <tr>
-                <td colspan="2">
-                  <button type="submit" class="submit-btn">odeslat!</button>
-                </td>
-              </tr>
-              </table>
-              </form>
-      </div>
-    </div>
   </div>
-
-</div>
-</div>
 </div>
 
 <!-- CAROUSEL -->
@@ -238,104 +301,241 @@ Lorem ipsum...
   <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="../muzeum/obrazky/LOGO.png" class="d-block w-100">
+        <img src="obrazky/LOGO.png" class="d-block w-100">
       </div>
       <div class="carousel-item">
-        <img src="../muzeum/obrazky/LOGO.png" class="d-block w-100">
+        <img src="obrazky/LOGO.png" class="d-block w-100">
       </div>
     </div>
   </div>
 </div>
 
 <div class="recenze p-3">
-<div class="box"><h2>RECENZE</h2></div>
 
+  <!-- NADPIS -->
+  <div class="box text-center">
+    <h2>RECENZE</h2>
+  </div>
 
-<!-- CARD -->
-<div class="container mt-5">
-  <div class="row g-4">
+  <!-- 📦 CARDY -->
+  <div class="container mt-5">
+    <div class="row g-4" id="reviewContainer">
 
-    <div class="col-12 col-sm-6 col-md-6">
-      <div class="card h-100">
-        <img src="../muzeum/obrazky/LOGO.png" class="card-img-top">
-        <div class="card-body">
-          <h5>David</h5>
-          <p>Some example text.</p>
-          <a href="#" class="btn btn-primary">Go</a>
+      <!-- CARD 1 -->
+      <div class="col-12 col-sm-6 col-md-6">
+        <div class="card h-100">
+          <img src="obrazky/LOGO.png" class="card-img-top">
+          <div class="card-body">
+            <h5>David</h5>
+            <div class="stars">★★★★☆</div>
+            <p>Some example text.</p>
+            <a href="#" class="btn btn-primary">Go</a>
+          </div>
         </div>
       </div>
+
+      <!-- CARD 2 -->
+      <div class="col-12 col-sm-6 col-md-6">
+        <div class="card h-100">
+          <img src="obrazky/LOGO.png" class="card-img-top">
+          <div class="card-body">
+            <h5>Milena K</h5>
+            <div class="stars">★★★★☆</div>
+            <p>lorem ipsum</p>
+            <a href="#" class="btn btn-primary">Go</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="col-12 col-sm-6 col-md-6">
+        <div class="card h-100">
+          <img src="obrazky/LOGO.png" class="card-img-top">
+          <div class="card-body">
+            <h5>Milena K2</h5>
+            <div class="stars">★★★★☆</div>
+            <p>lorem ipsum</p>
+            <a href="#" class="btn btn-primary">Go</a>
+          </div>
+        </div>
+      </div>
+
     </div>
+  </div>
 
-    <div class="col-12 col-sm-6 col-md-6">
-      <div class="card h-100">
-        <img src="../muzeum/obrazky/LOGO.png" class="card-img-top">
-        <div class="card-body">
-          <h5>Milena K</h5>
-          <p>lorem ipsum</p>
-          <a href="#" class="btn btn-primary">Go</a>
-        </div>
-      </div>
-    </div>
+  <div class="mezera"></div>
 
-    <div class="col-12 col-sm-6 col-md-6">
-      <div class="card h-100">
-        <img src="../muzeum/obrazky/LOGO.png" class="card-img-top">
-        <div class="card-body">
-          <h5>Milena K2</h5>
-          <p>lorem ipsum</p>
-          <a href="#" class="btn btn-primary">Go</a>
+  <!-- 📝 FORM -->
+  <div class="box m-4 p-3">
+
+    <div class="accordion" id="reviewAccordion">
+
+      <div class="accordion-item">
+
+        <h3 class="accordion-header">
+          <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#reviewForm">
+            Přidat recenzi
+          </button>
+        </h3>
+
+        <div id="reviewForm" class="accordion-collapse collapse" data-bs-parent="#reviewAccordion">
+          <div class="accordion-body">
+
+            <form class="container" onsubmit="addReview(event)">
+              <div class="row g-3">
+
+                <div class="col-12 col-md-6">
+                  <input type="text" class="form-control custom-input" placeholder="Jméno">
+                </div>
+
+                <div class="col-12 col-md-6">
+                  <input type="text" class="form-control custom-input" placeholder="Příjmení">
+                </div>
+
+                <div class="col-12">
+                  <textarea class="form-control custom-input" rows="3" placeholder="Tvůj názor..."></textarea>
+                </div>
+
+                <!-- 🖼️ obrázek -->
+                <div class="col-12">
+                  <input type="file" class="form-control" id="imgInput" accept="image/*">
+                </div>
+
+                <!-- ⭐ rating -->
+                <div class="col-12 text-center">
+                  <div class="rating">
+                    <input type="radio" name="star" value="5" id="star5"><label for="star5">★</label>
+                    <input type="radio" name="star" value="4" id="star4"><label for="star4">★</label>
+                    <input type="radio" name="star" value="3" id="star3"><label for="star3">★</label>
+                    <input type="radio" name="star" value="2" id="star2"><label for="star2">★</label>
+                    <input type="radio" name="star" value="1" id="star1"><label for="star1">★</label>
+                  </div>
+                </div>
+
+                <div class="col-12 text-center">
+                  <button class="submit-btn">Odeslat</button>
+                </div>
+
+              </div>
+            </form>
+
+          </div>
         </div>
+
       </div>
+
     </div>
 
   </div>
-</div>
 
-<div class="mezera"></div>
-
-<div class="box">
-
-  <div class="accordion m-4" id="accordionExample">
-    <div class="accordion-item">
-      <h3 class="accordion-header">
-        <button class="accordion-button collapsed" type="button"
-          data-bs-toggle="collapse" data-bs-target="#item2">
-          Přidat recenzi
-        </button>
-      </h3>
-      <div id="item2" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-        <div class="accordion-body">
-              <form>
-                <table>
-                <tr>
-                  <td>Jméno</td>
-                  <td><input type="text" value="Honza"></td>
-                </tr>
-                <tr>
-                  <td>zadej příjmení</td>
-                  <td><input type="text"></td>
-                </tr>
-                <tr>
-                  <td>Názor! :-)</td>
-                  <td><input type="email"></td>
-                </tr>
-                <tr>
-                  <td colspan="2">
-                    <button type="submit" class="submit-btn">odeslat</button>
-                  </td>
-                </tr>
-                </table>
-                </form>
-        </div>
-      </div>
-    </div>
-  
-  </div>
-  
-  </div>
 </div>
 
 <div class="kontakty p-3">Lorem ipsum...</div>
+
+<script>
+const targetDate = new Date();
+targetDate.setHours(targetDate.getHours() + 5); // +5 hodin (můžeš změnit)
+
+function updateCountdown() {
+  const now = new Date();
+  const diff = targetDate - now;
+
+  if (diff <= 0) {
+    document.getElementById("countdown").innerText = "Hotovo!";
+    return;
+  }
+
+  const h = Math.floor(diff / 1000 / 60 / 60);
+  const m = Math.floor(diff / 1000 / 60) % 60;
+  const s = Math.floor(diff / 1000) % 60;
+
+  document.getElementById("countdown").innerText =
+    `${h}h ${m}m ${s}s`;
+}
+
+setInterval(updateCountdown, 1000);
+
+let savedData = null;
+
+/* 1️⃣ otevření potvrzení */
+function confirmRezervace(event) {
+  event.preventDefault();
+
+  const form = event.target;
+
+  savedData = {
+    jmeno: form.querySelector('input[placeholder="Jméno"]').value,
+    prijmeni: form.querySelector('input[placeholder="Příjmení"]').value,
+    datum: form.querySelector('input[type="datetime-local"]').value,
+    pocet: form.querySelector('input[placeholder="Počet lidí"]').value,
+    email: form.querySelector('input[type="email"]').value
+  };
+
+  const modal = new bootstrap.Modal(document.getElementById('confirmModal'));
+  modal.show();
+}
+
+/* 2️⃣ finální odeslání */
+function sendRezervace() {
+
+  bootstrap.Modal.getInstance(document.getElementById('confirmModal')).hide();
+
+  document.getElementById("rezModalBody").innerHTML = `
+    <strong>Děkujeme za rezervaci!</strong><br><br>
+    Jméno: ${savedData.jmeno} ${savedData.prijmeni}<br>
+    Datum: ${savedData.datum}<br>
+    Počet lidí: ${savedData.pocet}<br>
+    Email: ${savedData.email}
+  `;
+
+  const modal = new bootstrap.Modal(document.getElementById('rezModal'));
+  modal.show();
+
+  document.querySelector("#rezMain form").reset();
+}
+
+function addReview(event) {
+  event.preventDefault();
+
+  const form = event.target;
+
+  const jmeno = form.querySelector('input[placeholder="Jméno"]').value;
+  const prijmeni = form.querySelector('input[placeholder="Příjmení"]').value;
+  const text = form.querySelector('textarea').value;
+
+  const stars = form.querySelector('input[name="star"]:checked')?.value || 5;
+
+  const fileInput = document.getElementById("imgInput");
+
+  let imgURL = "obrazky/LOGO.png"; // fallback
+
+  if (fileInput.files && fileInput.files[0]) {
+    imgURL = URL.createObjectURL(fileInput.files[0]);
+  }
+
+  const starText = "★★★★★☆☆☆☆☆".slice(5 - stars, 10 - stars);
+
+  const card = document.createElement("div");
+  card.className = "col-12 col-sm-6 col-md-6";
+
+  card.innerHTML = `
+    <div class="card h-100">
+      <img src="${imgURL}" class="card-img-top">
+      <div class="card-body">
+        <h5>${jmeno} ${prijmeni}</h5>
+        <div class="stars">${starText}</div>
+        <p>${text}</p>
+        <a href="#" class="btn btn-primary">Go</a>
+      </div>
+    </div>
+  `;
+
+  document.getElementById("reviewContainer").appendChild(card);
+
+  form.reset();
+}
+
+</script>
 
 </body>
 </html>
