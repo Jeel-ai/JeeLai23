@@ -1,5 +1,15 @@
-/* ===== GLOBAL ===== */
+@font-face {
+  font-family: vlastni;
+  src: url(../league-spartan/LeagueSpartan-Bold.otf);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
+  margin: 0;
+  padding: 0;
   background-color: #000;
   color: aliceblue;
   letter-spacing: 2px;
@@ -8,16 +18,9 @@ body {
 
 img {
   width: 100%;
-  max-width: 300px;
 }
 
-/* ===== FONT ===== */
-@font-face {
-  font-family: vlastni;
-  src: url(../bowlby-one/BowlbyOneSC-Regular.otf);
-}
-
-/* ===== NAVBAR ===== */
+/* NAVBAR */
 .navbar {
   background-color: #000 !important;
   border-bottom: 2px solid #5de0e6;
@@ -26,17 +29,45 @@ img {
   z-index: 1000;
 }
 
+.navbar-collapse {
+  justify-content: flex-end;
+}
+
+.navbar-brand {
+  font-size: 28px;
+  color: white !important;
+  text-shadow: none !important;
+  transition: 0.3s;
+  pointer-events: none;
+}
+
 .navbar-toggler {
   border: 2px solid #5de0e6;
   box-shadow: 0 0 10px #5de0e6;
-  text-align: right;
 }
 
 .navbar-toggler-icon {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='%235de0e6' stroke-width='2' stroke-linecap='round' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 
-/* ===== SECTIONS ===== */
+.nav-link {
+  color: white !important;
+  transition: 0.3s;
+  padding: 8px 16px !important;
+  border-radius: 20px;
+}
+
+.nav-link:hover {
+  color: #F5B027 !important;
+  background: rgba(245,176,39,0.08);
+  text-shadow: 0 0 6px rgba(245,176,39,0.4);
+}
+
+.navbar-nav {
+  gap: 10px;
+}
+
+/* SECTIONS */
 .timer,
 .dotaznik {
   background-color: #000;
@@ -51,15 +82,14 @@ img {
   background: linear-gradient(to bottom, #000, #0300b9);
 }
 
-/* ===== BANNER ===== */
+/* BANNER */
 .banner {
   width: 100%;
   min-height: 60vh;
   display: flex;
   align-items: center;
   justify-content: center;
-
-  background: url(../obrazky/Banner.png) center/cover no-repeat;
+  background: url(../obrazky/escalators-subway-station-night.jpg) center/cover no-repeat;
 }
 
 .banner p {
@@ -71,12 +101,11 @@ img {
 .logo {
   width: 80%;
   max-width: 500px;
-  margin: auto;
+  margin: 2cm auto 0;
   display: block;
-  margin-top: 2cm;
 }
 
-/* ===== TEXT EFFECT ===== */
+/* TEXT */
 .glow {
   font-size: 80px;
   animation: glow 1s ease-in-out infinite alternate;
@@ -87,7 +116,7 @@ img {
   to { text-shadow: 0 0 30px #fffc33; }
 }
 
-/* ===== HEADINGS ===== */
+/* HEADINGS */
 h2 {
   font-size: 72px;
   font-weight: bold;
@@ -96,47 +125,44 @@ h2 {
   -webkit-text-fill-color: transparent;
 }
 
-/* ===== BOX ===== */
-.box {
-  padding: 1rem;
+/* BOX / CARDS */
+.box,
+.card,
+.contact-box,
+.ticket-card {
   border-radius: 30px;
   text-align: center;
-
+  color: white;
   border: 3px solid transparent;
   background:
     radial-gradient(circle at center, #0300b9, #000) padding-box,
     radial-gradient(circle at center, #5de0e6, #004aad) border-box;
 }
 
-/* ===== CARD ===== */
 .card {
-  color: #fff;
-  border-radius: 20px;
   padding: 20px;
-  text-align: center;
-
-  border: 3px solid transparent;
-  background:
-    radial-gradient(circle at center, #0300b9, #000) padding-box,
-    radial-gradient(circle at center, #5de0e6, #004aad) border-box;
-
   max-width: 350px;
   margin: auto;
   transition: 0.4s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px #F5B027;
 }
 
 .card-img-top {
   padding: 20px;
 }
 
-/* ===== STARS ===== */
+/* STARS */
 .stars {
   color: #F5B027;
   font-size: 20px;
   margin-bottom: 10px;
 }
 
-/* ===== ACCORDION ===== */
+/* ACCORDION */
 .accordion-item {
   background: none !important;
   border: none !important;
@@ -144,21 +170,14 @@ h2 {
   overflow: hidden;
 }
 
-select.custom-input {
-  appearance: none;
-}
-
 .accordion-button {
   font-size: 2rem;
   color: #fff !important;
   border-radius: 2.5rem !important;
-
   border: 3px solid transparent !important;
   background:
     radial-gradient(circle at center, #0300b9, #000) padding-box,
     radial-gradient(circle at center, #5de0e6, #004aad) border-box !important;
-
-  box-shadow: none !important;
 }
 
 .accordion-button::after {
@@ -175,23 +194,38 @@ select.custom-input {
   padding: 1rem 2rem;
 }
 
-/* ===== FORM ===== */
+/* FORM */
 input,
-select {
+select,
+.custom-input {
   width: 100%;
-  background: transparent;
-  border: none;
-  color: #fff;
-  text-align: center;
   padding: 10px;
+  text-align: center;
+  color: #fff !important;
+  background: transparent !important;
+  border-radius: 30px !important;
+  border: 2px solid #5de0e6 !important;
+}
+
+select.custom-input {
+  background-color: #000 !important;
+  appearance: none;
+}
+
+select.custom-input option {
+  background-color: #000;
+  color: #00ddff;
 }
 
 input:focus,
-select:focus {
+select:focus,
+.custom-input:focus {
   outline: none;
-  box-shadow: 0 0 10px #5de0e6;
+  box-shadow: 0 0 12px #27005d;
+  border-color: #0a0d60;
 }
 
+/* BUTTON */
 .submit-btn {
   margin: 20px auto;
   padding: 10px 30px;
@@ -202,7 +236,7 @@ select:focus {
   transition: 0.3s;
 }
 
-/* ===== RATING ===== */
+/* RATING */
 .rating {
   direction: rtl;
   unicode-bidi: bidi-override;
@@ -224,80 +258,113 @@ select:focus {
   color: #F5B027;
 }
 
-/* ===== CAROUSEL ===== */
-.banner1 {
-  max-width: 600px;
+/* CAROUSEL */
+#expoCarousel {
+  width: 100%;
+  max-width: 1100px;
   margin: auto;
+  border-radius: 20px;
+  overflow: hidden;
 }
 
-/* ===== SPACING ===== */
+/* SPACING */
 .mezera {
   height: 4cm;
 }
 
-/* ===== HOVER EFFECTS ===== */
-a,
-button,
-.card,
-.accordion-button {
-  transition: 0.4s;
-}
-
-a:hover,
-button:hover {
-  color: #F5B027 !important;
-  text-shadow: 0 0 10px #F5B027;
-}
-
-.card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 25px #F5B027;
-}
-
-.accordion-button:hover {
-  box-shadow: 0 0 15px #F5B027;
-}
-
-.submit-btn:hover {
-  box-shadow: 0 0 15px #F5B027;
-}
-
-/* ===== RESPONSIVE ===== */
-@media (max-width: 768px) {
-  h2 {
-    font-size: 40px;
-  }
-
-  .glow {
-    font-size: 40px;
-  }
-
-  .accordion-button {
-    font-size: 1.2rem;
-    padding: 10px;
-  }
-
-  .accordion-body {
-    font-size: 14px;
-    padding: 10px;
-  }
-}
-
-/* ===== SCROLL ===== */
-html {
-  scroll-behavior: smooth;
-}
-
-.custom-input {
-  border-radius: 30px !important;
-  border: 2px solid #5de0e6 !important;
-  background: transparent !important;
-  color: #fff !important;
+/* TITLE BOX */
+.title-box {
+  width: 100%;
+  min-height: 180px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  padding: 10px;
+  border-radius: 999px;
+  border: 3px solid transparent;
+  background:
+    radial-gradient(circle at center, #0300b9, #000) padding-box,
+    radial-gradient(circle at center, #5de0e6, #004aad) border-box;
 }
 
-.custom-input:focus {
-  box-shadow: 0 0 12px #27005d;
-  border-color: #0a0d60;
+/* TIMER */
+.timer-box {
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#expoTeaser {
+  font-size: 18px;
+  color: #5de0e6;
+}
+
+/* CONTACT */
+.contact-box {
+  padding: 30px;
+  width: 100%;
+  overflow-wrap: break-word;
+}
+
+iframe {
+  width: 100%;
+  min-height: 300px;
+  border-radius: 20px;
+}
+
+/* DETAIL */
+.detail-page {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle at center, #0300b9, #000);
+}
+
+.detail-box {
+  max-width: 700px;
+  width: 100%;
+  text-align: center;
+  padding: 30px;
+  border-radius: 30px;
+  color: white;
+  background: rgba(0,0,0,0.35);
+  backdrop-filter: blur(10px);
+  border: 3px solid rgba(93,224,230,0.4);
+}
+
+#detailImg {
+  width: 100%;
+  max-width: 320px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 20px;
+  margin: 0 auto 20px;
+  display: block;
+}
+
+/* REVIEW */
+.review-card {
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.review-card.expanded {
+  transform: scale(1.02);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  h2 { font-size: 40px; }
+  .glow { font-size: 40px; }
+  .accordion-button { font-size: 1.2rem; }
+  .title-box { min-height: 130px; border-radius: 28px !important; }
+  .card, .box, .contact-box { padding: 18px !important; }
+  .detail-box { width: 95%; padding: 15px; }
 }
