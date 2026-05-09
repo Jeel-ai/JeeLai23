@@ -89,7 +89,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: url(../obrazky/escalators-subway-station-night.jpg) center/cover no-repeat;
+  background: url(/obrazky/escalators-subway-station-night.jpg) center/cover no-repeat;
 }
 
 .banner p {
