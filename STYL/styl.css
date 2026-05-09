@@ -133,14 +133,24 @@ img {
   }
 }
 
-/* HEADINGS */
 h2 {
-  font-size: 72px;
+  font-size: clamp(36px, 7vw, 72px);
   font-weight: bold;
   text-align: center;
+  line-height: 1.2;
+  word-break: break-word;
+
   background: radial-gradient(circle, #5de0e6, #004aad);
+
+  /* kompatibilita */
+  background-clip: text;
   -webkit-background-clip: text;
+
+  color: transparent;
   -webkit-text-fill-color: transparent;
+
+  margin-bottom: 20px;
+  padding: 0 10px;
 }
 
 /* BOX / CARDS */
