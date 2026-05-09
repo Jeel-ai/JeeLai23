@@ -626,63 +626,118 @@ Díky týdenní rotaci se muzeum nikdy neopakuje stejným způsobem. Každá ná
 
   <div class="mezera"></div>
 
-  <div class="box m-4 p-3">
+ <!-- RECENZE -->
+<div class="box review-wrapper container-fluid my-4 px-2 px-md-4 py-3">
 
-    <div class="accordion" id="reviewAccordion">
+  <div class="accordion" id="reviewAccordion">
 
-      <div class="accordion-item">
+    <div class="accordion-item review-accordion-item">
 
-        <h3 class="accordion-header">
-          <button class="accordion-button collapsed"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#reviewForm">
+      <!-- BUTTON -->
+      <h3 class="accordion-header">
+
+        <button class="accordion-button collapsed review-btn"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#reviewForm"
+                aria-expanded="false"
+                aria-controls="reviewForm">
+
+          <span class="review-btn-text">
             Přidat recenzi
-          </button>
-        </h3>
+          </span>
 
-        <div id="reviewForm"
-             class="accordion-collapse collapse"
-             data-bs-parent="#reviewAccordion">
+        </button>
 
-          <div class="accordion-body">
+      </h3>
 
-            <form class="container" onsubmit="addReview(event)">
-              <div class="row g-3">
+      <!-- FORM -->
+      <div id="reviewForm"
+           class="accordion-collapse collapse"
+           data-bs-parent="#reviewAccordion">
 
-                <div class="col-12 col-md-6">
-                  <input type="text" class="form-control custom-input" placeholder="Jméno">
-                </div>
+        <div class="accordion-body">
 
-                <div class="col-12 col-md-6">
-                  <input type="text" class="form-control custom-input" placeholder="Příjmení">
-                </div>
+          <form class="container-fluid px-0"
+                onsubmit="addReview(event)">
 
-                <div class="col-12">
-                  <textarea class="form-control custom-input" rows="3" placeholder="Tvůj názor může obsahovat maximálně 120 znaků..."></textarea>
-                </div>
+            <div class="row g-3">
 
-                <div class="col-12">
-                  <input type="file" class="form-control" id="imgInput" accept="image/*">
-                </div>
+              <!-- JMENO -->
+              <div class="col-12 col-md-6">
 
-                <div class="col-12 text-center">
-                  <div class="rating">
-                    <input type="radio" name="star" value="5" id="star5"><label for="star5">★</label>
-                    <input type="radio" name="star" value="4" id="star4"><label for="star4">★</label>
-                    <input type="radio" name="star" value="3" id="star3"><label for="star3">★</label>
-                    <input type="radio" name="star" value="2" id="star2"><label for="star2">★</label>
-                    <input type="radio" name="star" value="1" id="star1"><label for="star1">★</label>
-                  </div>
-                </div>
+                <input type="text"
+                       class="form-control custom-input"
+                       placeholder="Jméno">
 
-                <div class="col-12 text-center">
-                  <button class="submit-btn">Odeslat</button>
+              </div>
+
+              <!-- PRIJMENI -->
+              <div class="col-12 col-md-6">
+
+                <input type="text"
+                       class="form-control custom-input"
+                       placeholder="Příjmení">
+
+              </div>
+
+              <!-- TEXT -->
+              <div class="col-12">
+
+                <textarea class="form-control custom-input review-textarea"
+                          rows="4"
+                          maxlength="120"
+                          placeholder="Tvůj názor může obsahovat maximálně 120 znaků..."></textarea>
+
+              </div>
+
+              <!-- IMAGE -->
+              <div class="col-12">
+
+                <input type="file"
+                       class="form-control custom-file"
+                       id="imgInput"
+                       accept="image/*">
+
+              </div>
+
+              <!-- STARS -->
+              <div class="col-12 text-center">
+
+                <div class="rating d-flex justify-content-center flex-row-reverse gap-1">
+
+                  <input type="radio" name="star" value="5" id="star5">
+                  <label for="star5">★</label>
+
+                  <input type="radio" name="star" value="4" id="star4">
+                  <label for="star4">★</label>
+
+                  <input type="radio" name="star" value="3" id="star3">
+                  <label for="star3">★</label>
+
+                  <input type="radio" name="star" value="2" id="star2">
+                  <label for="star2">★</label>
+
+                  <input type="radio" name="star" value="1" id="star1">
+                  <label for="star1">★</label>
+
                 </div>
 
               </div>
-            </form>
 
-          </div>
+              <!-- BUTTON -->
+              <div class="col-12 text-center">
+
+                <button class="submit-btn w-100">
+                  Odeslat
+                </button>
+
+              </div>
+
+            </div>
+
+          </form>
+
         </div>
 
       </div>
@@ -693,46 +748,73 @@ Díky týdenní rotaci se muzeum nikdy neopakuje stejným způsobem. Každá ná
 
 </div>
 
-<div class="kontakty p-5 d-flex justify-content-center align-items-center" id="kontakty">
+<!-- KONTAKTY -->
+<div class="kontakty py-5 px-3 d-flex justify-content-center align-items-center"
+     id="kontakty">
 
   <div class="container">
 
+    <!-- TITLE -->
     <div class="title-box mb-5">
 
       <h2>KONTAKTY</h2>
 
     </div>
 
-    <div class="row g-4 align-items-center">
+    <div class="row g-4 align-items-stretch">
 
-      <div class="col-lg-5">
+      <!-- INFO -->
+      <div class="col-12 col-lg-5">
 
-        <div class="contact-box">
+        <div class="contact-box h-100">
 
-          <h4>Kosmasovo muzeum</h4>
+          <div class="contact-item">
 
-          <p>📍 Karlova 25, Praha</p>
+            <h4 class="mb-4">
+              Kosmasovo muzeum
+            </h4>
 
-          <p>📞 +420 123 456 789</p>
+            <p>
+              📍 Karlova 25, Praha
+            </p>
 
-          <p>📧 info@kosmasmuzeum.cz</p>
+            <p>
+              📞
+              <a href="tel:+420123456789">
+                +420 123 456 789
+              </a>
+            </p>
 
-          <p>🕒 9:00–18:00</p>
+            <p>
+              📧
+              <a href="mailto:info@kosmasmuzeum.cz">
+                info@kosmasmuzeum.cz
+              </a>
+            </p>
+
+            <p>
+              🕒 9:00–18:00
+            </p>
+
+          </div>
 
         </div>
 
       </div>
 
-      <div class="col-lg-7">
+      <!-- MAP -->
+      <div class="col-12 col-lg-7">
 
-        <iframe
-          src="https://www.google.com/maps?q=Karlova+25+Praha&output=embed"
-          width="100%"
-          height="400"
-          style="border:0;"
-          allowfullscreen=""
-          loading="lazy">
-        </iframe>
+        <div class="map-wrapper">
+
+          <iframe
+            src="https://www.google.com/maps?q=Karlova+25+Praha&output=embed"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+
+        </div>
 
       </div>
 
@@ -745,4 +827,3 @@ Díky týdenní rotaci se muzeum nikdy neopakuje stejným způsobem. Každá ná
 <script src="muzeum.js"></script>
 </body>
 </html>
-
