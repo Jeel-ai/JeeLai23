@@ -1,6 +1,12 @@
-@font-face {
+
+@font-face 
+{
   font-family: vlastni;
   src: url(../league-spartan/LeagueSpartan-Bold.otf);
+}
+
+* {
+  box-sizing: border-box;
 }
 
 html {
@@ -10,6 +16,7 @@ html {
 body {
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
   background-color: #000;
   color: aliceblue;
   letter-spacing: 2px;
@@ -18,6 +25,9 @@ body {
 
 img {
   width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 /* NAVBAR */
@@ -27,6 +37,7 @@ img {
   position: sticky;
   top: 0;
   z-index: 1000;
+  padding: 10px 20px;
 }
 
 .navbar-collapse {
@@ -50,6 +61,10 @@ img {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='%235de0e6' stroke-width='2' stroke-linecap='round' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 
+.navbar-nav {
+  gap: 10px;
+}
+
 .nav-link {
   color: white !important;
   transition: 0.3s;
@@ -61,10 +76,6 @@ img {
   color: #F5B027 !important;
   background: rgba(245,176,39,0.08);
   text-shadow: 0 0 6px rgba(245,176,39,0.4);
-}
-
-.navbar-nav {
-  gap: 10px;
 }
 
 /* SECTIONS */
@@ -89,6 +100,8 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 40px 20px;
+  text-align: center;
   background: url(../obrazky/escalators-subway-station-night.jpg) center/cover no-repeat;
 }
 
@@ -112,14 +125,20 @@ img {
 }
 
 @keyframes glow {
-  from { text-shadow: 0 0 10px rgb(238, 162, 49); }
-  to { text-shadow: 0 0 30px #fffc33; }
+  from {
+    text-shadow: 0 0 10px rgb(238, 162, 49);
+  }
+
+  to {
+    text-shadow: 0 0 30px #fffc33;
+  }
 }
 
 /* HEADINGS */
 h2 {
   font-size: 72px;
   font-weight: bold;
+  text-align: center;
   background: radial-gradient(circle, #5de0e6, #004aad);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -234,6 +253,12 @@ select:focus,
   background: transparent;
   color: #fff;
   transition: 0.3s;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background-color: #5de0e6;
+  color: #000;
 }
 
 /* RATING */
@@ -361,11 +386,148 @@ iframe {
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
-  h2 { font-size: 40px; }
-  .glow { font-size: 40px; }
-  .accordion-button { font-size: 1.2rem; }
-  .title-box { min-height: 130px; border-radius: 28px !important; }
-  .card, .box, .contact-box { padding: 18px !important; }
-  .detail-box { width: 95%; padding: 15px; }
-  .navbar-brand { font-size: 12px; }
+
+  body {
+    letter-spacing: 1px;
+  }
+
+  .navbar {
+    padding: 10px 15px;
+  }
+
+  .navbar-brand {
+    font-size: 20px;
+  }
+
+  .navbar-nav {
+    gap: 5px;
+    text-align: center;
+    padding-top: 10px;
+  }
+
+  .nav-link {
+    font-size: 16px;
+    padding: 10px !important;
+  }
+
+  .banner {
+    min-height: 50vh;
+    padding: 20px;
+  }
+
+  .banner p {
+    font-size: 15px;
+    width: 95%;
+  }
+
+  .logo {
+    width: 90%;
+    margin-top: 40px;
+  }
+
+  h2 {
+    font-size: 38px;
+    line-height: 1.2;
+  }
+
+  .glow {
+    font-size: 42px;
+  }
+
+  .accordion-button {
+    font-size: 18px;
+    padding: 15px;
+    line-height: 1.3;
+  }
+
+  .accordion-body {
+    padding: 15px;
+    font-size: 14px;
+  }
+
+  .box,
+  .card,
+  .contact-box,
+  .ticket-card {
+    width: 100%;
+    padding: 18px;
+    border-radius: 24px;
+  }
+
+  .card {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  input,
+  select,
+  .custom-input {
+    font-size: 16px;
+    padding: 12px;
+  }
+
+  .submit-btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+  }
+
+  .title-box {
+    min-height: 120px;
+    padding: 20px;
+    border-radius: 30px;
+  }
+
+  .timer-box {
+    min-height: auto;
+    padding: 20px;
+  }
+
+  #expoTeaser {
+    font-size: 15px;
+  }
+
+  iframe {
+    min-height: 220px;
+  }
+
+  .detail-page {
+    padding: 10px;
+  }
+
+  .detail-box {
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 20px;
+    border-radius: 24px;
+  }
+
+  #detailImg {
+    max-width: 220px;
+  }
+
+  .review-card {
+    padding: 15px;
+  }
+
+  .mezera {
+    height: 80px;
+  }
+
+  .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  [class*="col-"] {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
 }
+
