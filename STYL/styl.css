@@ -791,6 +791,65 @@ iframe {
     font-size: 14px;
     line-height: 1.6;
   }
+
+  /* REVIEW RESPONSIVE */
+.review-wrapper {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  border-radius: 30px;
+}
+
+.review-accordion-item {
+  border-radius: 30px !important;
+  overflow: hidden;
+}
+
+.review-btn {
+  min-height: 80px;
+  padding: 20px 25px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.review-btn-text {
+  width: 100%;
+  text-align: center;
+  font-size: clamp(18px, 4vw, 32px);
+  line-height: 1.2;
+  word-break: break-word;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+  .review-wrapper {
+    margin: 15px 0 !important;
+    padding: 10px !important;
+    border-radius: 24px;
+  }
+
+  .review-accordion-item {
+    border-radius: 24px !important;
+  }
+
+  .review-btn {
+    min-height: 65px;
+    padding: 16px !important;
+    border-radius: 24px !important;
+  }
+
+  .review-btn-text {
+    font-size: 20px;
+  }
+
+  .accordion-button::after {
+    margin-left: 10px;
+    transform: scale(0.8);
+  }
+}
+  
 }
 }
 
