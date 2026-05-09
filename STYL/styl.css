@@ -367,4 +367,5 @@ iframe {
   .title-box { min-height: 130px; border-radius: 28px !important; }
   .card, .box, .contact-box { padding: 18px !important; }
   .detail-box { width: 95%; padding: 15px; }
+  .navbar-brand { font-size: 20px; }
 }
