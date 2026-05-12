@@ -103,26 +103,30 @@ function confirmRezervace(event) {
     vstupenka: form.querySelector('#ticketType').value
   };
 
-  new bootstrap.Modal(document.getElementById('confirmModal')).show();
+  const potvrzeni = confirm(
+    `Potvrdit rezervaci?\n\n` +
+    `Jméno: ${savedData.jmeno} ${savedData.prijmeni}\n` +
+    `Vstupenka: ${savedData.vstupenka}\n` +
+    `Datum: ${savedData.datum}\n` +
+    `Počet lidí: ${savedData.pocet}\n` +
+    `Email: ${savedData.email}`
+  );
+
+  if (potvrzeni) {
+    sendRezervace();
+  }
 }
 
 function sendRezervace() {
 
-  bootstrap.Modal
-    .getInstance(document.getElementById('confirmModal'))
-    .hide();
-
-  document.getElementById("rezModalBody").innerHTML = `
-    <strong>Děkujeme za rezervaci!</strong><br><br>
-
-    Jméno: ${savedData.jmeno} ${savedData.prijmeni}<br>
-    Vstupenka: ${savedData.vstupenka}<br>
-    Datum: ${savedData.datum}<br>
-    Počet lidí: ${savedData.pocet}<br>
-    Email: ${savedData.email}
-  `;
-
-  new bootstrap.Modal(document.getElementById('rezModal')).show();
+  alert(
+    `Děkujeme za rezervaci!\n\n` +
+    `Jméno: ${savedData.jmeno} ${savedData.prijmeni}\n` +
+    `Vstupenka: ${savedData.vstupenka}\n` +
+    `Datum: ${savedData.datum}\n` +
+    `Počet lidí: ${savedData.pocet}\n` +
+    `Email: ${savedData.email}`
+  );
 
   document.querySelector("#rezMain form").reset();
 }
