@@ -238,9 +238,10 @@ function toggleReview(btn) {
 }
 
 
+
+
+
 //PHP koutek
-
-
 
 fetch("api.php?action=rezervace", {
   method: "POST",
