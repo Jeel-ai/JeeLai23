@@ -236,3 +236,39 @@ function toggleReview(btn) {
     btn.dataset.expanded = "true";
   }
 }
+
+
+//PHP koutek
+
+
+
+fetch("api.php?action=rezervace", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json"
+  },
+  body: JSON.stringify({
+    jmeno: "Jan",
+    prijmeni: "Novák",
+    datum: "2026-05-14T12:00",
+    pocet: 2,
+    email: "test@test.cz",
+    vstupenka: "VIP"
+  })
+});
+
+const formData = new FormData();
+formData.append("jmeno", "Jan");
+formData.append("prijmeni", "Novák");
+formData.append("text", "Super muzeum");
+formData.append("stars", 5);
+formData.append("image", fileInput.files[0]);
+
+fetch("api.php?action=recenze", {
+  method: "POST",
+  body: formData
+});
+
+fetch("api.php?action=get_recenze")
+  .then(r => r.json())
+  .then(data => console.log(data));
