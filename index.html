@@ -1,0 +1,1196 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MONOLITH Museum — muzeum monumentálního sochařství, brutalismu a sakrálního umění. Read the Stone.">
+  <meta name="author" content="MONOLITH Museum">
+  <meta property="og:title" content="MONOLITH Museum">
+  <meta property="og:description" content="Díváme se pod povrch kamene. Monumentální sochařství, brutalismus, sakrální umění.">
+  <title>MONOLITH Museum — Read the Stone</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+
+  <!-- Google Fonts: Cormorant Garamond (display) + Jost (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+  <!-- Vlastní styly -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ============================================================
+     1. NAVIGACE (Sticky)
+     ============================================================ -->
+<nav id="mainNav" class="navbar navbar-expand-lg">
+  <div class="container-fluid-narrow d-flex align-items-center justify-content-between">
+
+    <a class="nav-logo navbar-brand" href="#hero" aria-label="MONOLITH Museum — úvod">
+      <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="15" cy="15" r="10" stroke="#889063" stroke-width="2"/>
+        <line x1="22" y1="22" x2="32" y2="32" stroke="#CFBB99" stroke-width="2.5" stroke-linecap="square"/>
+        <!-- Detaily struktury kamene uvnitř lupy -->
+        <line x1="11" y1="12" x2="19" y2="12" stroke="#CFBB99" stroke-width="1" opacity="0.6"/>
+        <line x1="10" y1="15" x2="20" y2="15" stroke="#CFBB99" stroke-width="1" opacity="0.4"/>
+        <line x1="12" y1="18" x2="18" y2="18" stroke="#CFBB99" stroke-width="1" opacity="0.6"/>
+      </svg>
+      <div class="nav-logo-text">
+        <strong>MONOLITH</strong>
+        <span>Read the Stone</span>
+      </div>
+    </a>
+
+    <!-- Hamburger (mobil) -->
+    <button class="navbar-toggler ms-auto" type="button"
+            data-bs-toggle="collapse" data-bs-target="#navbarMenu"
+            aria-controls="navbarMenu" aria-expanded="false" aria-label="Otevřít menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Menu -->
+    <div class="collapse navbar-collapse" id="navbarMenu">
+      <ul class="navbar-nav ms-auto gap-1">
+        <li class="nav-item"><a class="nav-link" href="#current-exhibitions">Výstavy</a></li>
+        <li class="nav-item"><a class="nav-link" href="#premium-carousel">Prémiové</a></li>
+        <li class="nav-item"><a class="nav-link" href="#expositions">Expozice</a></li>
+        <li class="nav-item"><a class="nav-link" href="#tickets">Vstupné</a></li>
+        <li class="nav-item"><a class="nav-link" href="#reviews">Recenze</a></li>
+        <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Kontakt</a></li>
+        <li class="nav-item ms-lg-2">
+          <a class="nav-link btn-stone btn-stone-light py-1 px-3" href="#reservation">
+            <i class="bi bi-ticket-perforated me-1"></i>Vstupenky
+          </a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</nav>
+
+
+<!-- ============================================================
+     2. HERO SEKCE
+     ============================================================ -->
+<section id="hero">
+
+  <div class="hero-bg">
+    <img
+      src="images/hero.jpg" alt="MONOLITH Museum"  class="hero-image">
+  </div>
+
+  <div class="hero-overlay"></div>
+  <div class="hero-diagonal"></div>
+  <div class="container-fluid-narrow w-100">
+    <div class="row align-items-center min-vh-75">
+      <div class="col-lg-7 hero-content reveal">
+        <div class="hero-badge">Muzeum otevřeno · Po–Ne 9:00–18:00</div>
+        <p class="label">Praha · Monumentální sochařství · Est. 1994</p>
+        <h1 class="hero-title">
+          Čtěte<br>
+          <em>kámen.</em>
+        </h1>
+        <p class="hero-subtitle">
+          Díváme se pod povrch. Rýhy v mramoru, struktura bronzu,
+          váha betonu — každý materiál nese svůj příběh.
+        </p>
+        <div class="d-flex flex-wrap gap-3">
+          <a href="#reservation" class="btn-stone btn-stone-light">
+            <i class="bi bi-ticket-perforated"></i>
+            Rezervovat vstup
+          </a>
+          <a href="#expositions" class="btn-stone" style="color:var(--sand); border-color:var(--sage);">
+            <i class="bi bi-grid-3x3-gap"></i>
+            Prohlédnout expozice
+          </a>
+        </div>
+      </div>
+
+      <!-- Hero stats -->
+      <div class="col-lg-4 offset-lg-1 mt-5 mt-lg-0 hero-content reveal reveal-delay-2">
+        <div class="d-flex flex-column gap-3">
+          <div class="p-3" style="background:rgba(255,255,255,.05); border:1px solid rgba(207,187,153,.15);">
+            <div class="label">Stálé expozice</div>
+            <div style="font-family:var(--font-display); font-size:2.5rem; color:var(--cream);">8</div>
+          </div>
+          <div class="p-3" style="background:rgba(255,255,255,.05); border:1px solid rgba(207,187,153,.15);">
+            <div class="label">Aktuálních výstav</div>
+            <div style="font-family:var(--font-display); font-size:2.5rem; color:var(--cream);">3</div>
+          </div>
+          <div class="p-3" style="background:rgba(255,255,255,.05); border:1px solid rgba(207,187,153,.15);">
+            <div class="label">Návštěvníků ročně</div>
+            <div style="font-family:var(--font-display); font-size:2.5rem; color:var(--cream);">31K+</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scrolldown hint -->
+  <div class="hero-scroll" aria-hidden="true">
+    <span>Scroll</span>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+      <path d="M12 5v14m-7-7 7 7 7-7"/>
+    </svg>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     3. AKTUÁLNÍ VÝSTAVY (Banner sekce)
+     ============================================================ -->
+<section id="current-exhibitions" class="bg-cream">
+  <div class="container-fluid-narrow">
+    <div class="text-center mb-5 reveal">
+      <p class="label">Právě probíhá</p>
+      <h2 class="section-title">Aktuální výstavy</h2>
+    </div>
+
+    <div class="row g-4">
+      <!-- Výstava 1 -->
+      <div class="col-md-4 reveal reveal-delay-1">
+        <div class="exhibition-banner">
+          <div class="exhibition-banner-img"></div>
+          <div class="exhibition-banner-content">
+            <span class="exhibition-tag">Probíhá</span>
+            <h3 class="exhibition-name">Horizon of Stone</h3>
+            <p class="exhibition-dates">15. 3. 2025 – 31. 8. 2025</p>
+            <p class="exhibition-desc">
+              Panoramatická instalace skandinávských sochařů pracujících s přirozeným světlem a žulovými bloky.
+            </p>
+            <a href="#reservation" class="btn-stone btn-stone-light mt-2" style="font-size:0.7rem; padding:0.5rem 1.2rem;">
+              Koupit vstupenky
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Výstava 2 -->
+      <div class="col-md-4 reveal reveal-delay-2">
+        <div class="exhibition-banner">
+          <div class="exhibition-banner-img"></div>
+          <div class="exhibition-banner-content">
+            <span class="exhibition-tag">Probíhá</span>
+            <h3 class="exhibition-name">Iron Cathedral</h3>
+            <p class="exhibition-dates">1. 5. 2025 – 30. 10. 2025</p>
+            <p class="exhibition-desc">
+              Brutalistní ikonostas ze svařovaného kovu — průsečík sakrální architektury a průmyslové estetiky.
+            </p>
+            <a href="#reservation" class="btn-stone btn-stone-light mt-2" style="font-size:0.7rem; padding:0.5rem 1.2rem;">
+              Koupit vstupenky
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Výstava 3 — nadcházející -->
+      <div class="col-md-4 reveal reveal-delay-3">
+        <div class="exhibition-banner" style="border: 1px solid rgba(136,144,99,.4);">
+          <div class="exhibition-banner-img"></div>
+          <div class="exhibition-banner-content">
+            <span class="exhibition-tag" style="background:var(--sage);">Brzy</span>
+            <h3 class="exhibition-name">The Void Speaks</h3>
+            <p class="exhibition-dates">1. 9. 2025 – 28. 2. 2026</p>
+            <p class="exhibition-desc">
+              Negativní prostory jako sochařský výraz — prázdnota jako hlavní médium tří generací autorů.
+            </p>
+            <a href="#countdown" class="btn-stone btn-stone-light mt-2" style="font-size:0.7rem; padding:0.5rem 1.2rem;">
+              Sledovat odpočet
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     4. COUNTDOWN — odpočet do nové výstavy
+     ============================================================ -->
+<section id="countdown" class="bg-sand" style="padding-block: var(--space-md);">
+  <div class="container-fluid-narrow">
+    <div class="countdown-wrapper reveal">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-5">
+          <p class="countdown-label">Zahájení nové výstavy</p>
+          <h2 class="countdown-title">The Void Speaks</h2>
+          <p id="countdown-subtitle" style="color:var(--sand); font-size:0.9rem; opacity:.8;">
+            Výstava otevírá 1. září 2025 v 10:00.
+            Rezervujte vstupenky již nyní.
+          </p>
+          <a href="#reservation" class="btn-stone mt-3" style="border-color:var(--sand); color:var(--cream);">
+            <i class="bi bi-ticket-perforated"></i>
+            Předrezervovat
+          </a>
+        </div>
+        <div class="col-lg-7">
+          <div class="countdown-units">
+            <div class="countdown-unit">
+              <span class="countdown-number" id="cd-days">00</span>
+              <span class="countdown-unit-label">Dny</span>
+            </div>
+            <span class="countdown-separator" aria-hidden="true">:</span>
+            <div class="countdown-unit">
+              <span class="countdown-number" id="cd-hours">00</span>
+              <span class="countdown-unit-label">Hodiny</span>
+            </div>
+            <span class="countdown-separator" aria-hidden="true">:</span>
+            <div class="countdown-unit">
+              <span class="countdown-number" id="cd-mins">00</span>
+              <span class="countdown-unit-label">Minuty</span>
+            </div>
+            <span class="countdown-separator" aria-hidden="true">:</span>
+            <div class="countdown-unit">
+              <span class="countdown-number" id="cd-secs">00</span>
+              <span class="countdown-unit-label">Sekundy</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     5. CAROUSEL — Prémiové výstavy
+     ============================================================ -->
+<section id="premium-carousel">
+  <div class="container-fluid-narrow">
+    <div class="row mb-5 align-items-end">
+      <div class="col-md-8 reveal">
+        <p class="label">Top expozice</p>
+        <h2 class="section-title" style="color:var(--cream);">Prémiové výstavy</h2>
+        <p style="color:var(--sand); margin-top:1rem;">
+          Výjimečné kolekce dostupné pouze s prémiovým vstupem nebo ve zvláštních termínech.
+        </p>
+      </div>
+      <div class="col-md-4 text-md-end reveal reveal-delay-2">
+        <a href="#tickets" class="btn-stone btn-stone-light">
+          <i class="bi bi-star"></i>
+          Prémiové vstupenky
+        </a>
+      </div>
+    </div>
+
+    <!-- Bootstrap Carousel -->
+    <div id="premiumCarousel" class="carousel slide reveal" data-bs-ride="carousel" data-bs-interval="5000">
+
+      <!-- Indikátory -->
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#premiumCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#premiumCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#premiumCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+
+      <!-- Slidy -->
+      <div class="carousel-inner">
+
+<!-- Slide 1 -->
+<div class="carousel-item active carousel-slide">
+
+  <img
+    src="images/premium1.jfif"
+    alt="Horizon of Stone"
+    class="d-block w-100 carousel-image"
+  >
+
+  <div class="carousel-caption-custom">
+    <div class="row align-items-center">
+
+      <div class="col-md-8">
+        <p class="label">Prémiová výstava · Sál A–B</p>
+
+        <h3>Horizon of Stone</h3>
+
+        <p>
+          Panoramatická instalace s žulovými bloky
+          váhy přes 40 tun. Intimní průvodce po
+          světle a hmotě.
+        </p>
+      </div>
+
+      <div class="col-md-4 text-md-end">
+        <a href="#reservation" class="btn-stone btn-stone-light">
+          Rezervovat
+        </a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Slide 2 -->
+<div class="carousel-item carousel-slide">
+
+  <img
+    src="images/premium2.jfif"
+    alt="Iron Cathedral"
+    class="d-block w-100 carousel-image"
+  >
+
+  <div class="carousel-caption-custom">
+    <div class="row align-items-center">
+
+      <div class="col-md-8">
+        <p class="label">Prémiová výstava · Atrium</p>
+
+        <h3>Iron Cathedral</h3>
+
+        <p>
+          Dvanáct metrů svařovaného kovu —
+          monumentální oltář brutalistické
+          architektury.
+        </p>
+      </div>
+
+      <div class="col-md-4 text-md-end">
+        <a href="#reservation" class="btn-stone btn-stone-light">
+          Rezervovat
+        </a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Slide 3 -->
+<div class="carousel-item carousel-slide">
+
+  <img
+    src="images/premium3.jfif"
+    alt="The Void Speaks"
+    class="d-block w-100 carousel-image"
+  >
+
+  <div class="carousel-caption-custom">
+    <div class="row align-items-center">
+
+      <div class="col-md-8">
+        <p class="label">Nadcházející · od 1. 9. 2025</p>
+
+        <h3>The Void Speaks</h3>
+
+        <p>
+          Negativní prostory jako umělecký výraz.
+          Tři generace sochařů, jeden dialog
+          s prázdnotou.
+        </p>
+      </div>
+
+      <div class="col-md-4 text-md-end">
+        <a href="#countdown" class="btn-stone btn-stone-light">
+          Odpočet
+        </a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+      </div><!-- /.carousel-inner -->
+
+      <!-- Ovládání -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#premiumCarousel" data-bs-slide="prev" aria-label="Předchozí">
+        <i class="bi bi-chevron-left text-white" style="font-size:1.1rem;"></i>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#premiumCarousel" data-bs-slide="next" aria-label="Další">
+        <i class="bi bi-chevron-right text-white" style="font-size:1.1rem;"></i>
+      </button>
+
+    </div><!-- /#premiumCarousel -->
+  </div>
+</section>
+
+
+<!-- ============================================================
+     6. PŘEHLED EXPOZIC (dynamicky z CSV)
+     ============================================================ -->
+<section id="expositions" class="bg-cream">
+  <div class="container-fluid-narrow">
+    <div class="text-center mb-4 reveal">
+      <p class="label">Stálé sbírky</p>
+      <h2 class="section-title">Přehled expozic</h2>
+
+    </div>
+
+    <!-- Filtry kategorií (generuje JS) -->
+    <div id="exposition-filters" class="exposition-filters mb-4 reveal" aria-label="Filtr expozic"></div>
+
+    <!-- Mřížka karet (generuje JS) -->
+    <div id="expositions-grid" class="row g-4" role="list" aria-label="Seznam expozic"></div>
+
+  </div>
+</section>
+
+
+<!-- ============================================================
+     7. VSTUPNÉ
+     ============================================================ -->
+<section id="tickets" class="bg-sand">
+  <div class="container-fluid-narrow">
+    <div class="text-center mb-5 reveal">
+      <p class="label">Ceník</p>
+      <h2 class="section-title">Vstupné</h2>
+      <p class="mt-3">
+        Prémiové výstavy a speciální komentované prohlídky vyžadují samostatnou rezervaci.
+      </p>
+    </div>
+
+    <div class="row g-4 align-items-stretch">
+
+      <!-- Standardní -->
+      <div class="col-sm-6 col-lg-3 reveal reveal-delay-1">
+        <div class="ticket-card">
+          <p class="ticket-type">Standardní</p>
+          <h3 class="ticket-name">Plné</h3>
+          <div class="ticket-price"><sup>Kč</sup>250<span class="ticket-note">/ osoba</span></div>
+          <hr class="ticket-divider">
+          <ul class="ticket-features">
+            <li><i class="bi bi-check2 ticket-feature-icon"></i>Vstup do všech stálých expozic</li>
+            <li><i class="bi bi-check2 ticket-feature-icon"></i>Audiodůvodce (CZ/EN)</li>
+            <li><i class="bi bi-check2 ticket-feature-icon"></i>Mapa muzea</li>
+            <li><i class="bi bi-x ticket-feature-icon" style="color:#c0a070;"></i>Prémiové výstavy</li>
+          </ul>
+          <a href="#reservation" class="btn-stone w-100 justify-content-center">Rezervovat</a>
+        </div>
+      </div>
+
+      <!-- Senior -->
+      <div class="col-sm-6 col-lg-3 reveal reveal-delay-2">
+        <div class="ticket-card">
+          <p class="ticket-type">Senior 65+</p>
+          <h3 class="ticket-name">Senior</h3>
+          <div class="ticket-price"><sup>Kč</sup>150<span class="ticket-note">/ osoba</span></div>
+          <hr class="ticket-divider">
+          <ul class="ticket-features">
+            <li><i class="bi bi-check2 ticket-feature-icon"></i>Vstup do všech stálých expozic</li>
+            <li><i class="bi bi-check2 ticket-feature-icon"></i>Audiodůvodce (CZ/EN)</li>
+            <li><i class="bi bi-check2 ticket-feature-icon"></i>Mapa muzea</li>
+            <li><i class="bi bi-x ticket-feature-icon" style="color:#c0a070;"></i>Prémiové výstavy</li>
+          </ul>
+          <a href="#reservation" class="btn-stone w-100 justify-content-center">Rezervovat</a>
+        </div>
+      </div>
+
+      <!-- Premium — featured -->
+      <div class="col-sm-6 col-lg-3 reveal reveal-delay-3">
+        <div class="ticket-card featured">
+          <div class="ticket-badge">Nejoblíbenější</div>
+          <p class="ticket-type">Kompletní</p>
+          <h3 class="ticket-name">Prémiová</h3>
+          <div class="ticket-price"><sup>Kč</sup>450<span class="ticket-note">/ osoba</span></div>
+          <hr class="ticket-divider" style="border-color:rgba(136,144,99,.3);">
+          <ul class="ticket-features">
+            <li><i class="bi bi-check2 ticket-feature-icon"></i>Všechny stálé expozice</li>
+            <li><i class="bi bi-check2 ticket-feature-icon"></i>Prémiové výstavy</li>
+            <li><i class="bi bi-check2 ticket-feature-icon"></i>Komentovaná prohlídka</li>
+            <li><i class="bi bi-check2 ticket-feature-icon"></i>Katalog výstavy (PDF)</li>
+          </ul>
+          <a href="#reservation" class="btn-stone btn-stone-light w-100 justify-content-center">Rezervovat</a>
+        </div>
+      </div>
+
+      <!-- Rodinná -->
+      <div class="col-sm-6 col-lg-3 reveal reveal-delay-4">
+        <div class="ticket-card">
+          <p class="ticket-type">Rodina</p>
+          <h3 class="ticket-name">Rodinná</h3>
+          <div class="ticket-price"><sup>Kč</sup>700<span class="ticket-note">/ 2 dospělí + 2 děti</span></div>
+          <hr class="ticket-divider">
+          <ul class="ticket-features">
+            <li><i class="bi bi-check2 ticket-feature-icon"></i>Vstup do všech stálých expozic</li>
+            <li><i class="bi bi-check2 ticket-feature-icon"></i>Audiodůvodce (CZ/EN)</li>
+            <li><i class="bi bi-check2 ticket-feature-icon"></i>Dětský průvodce</li>
+            <li><i class="bi bi-x ticket-feature-icon" style="color:#c0a070;"></i>Prémiové výstavy</li>
+          </ul>
+          <a href="#reservation" class="btn-stone w-100 justify-content-center">Rezervovat</a>
+        </div>
+      </div>
+
+    </div><!-- /.row -->
+
+    <!-- Poznámka pod cenami -->
+    <p class="text-center mt-4 reveal" style="font-size:0.8rem; color:#7a6040; font-family:var(--font-mono); letter-spacing:0.05em;">
+      Studenti (do 26 let) se platnou ISIC kartou: 180 Kč · Děti do 6 let zdarma · ZTP průkaz: zdarma
+    </p>
+
+  </div>
+</section>
+
+
+<!-- ============================================================
+     8. REZERVAČNÍ FORMULÁŘ
+     ============================================================ -->
+<section id="reservation">
+  <div class="container-fluid-narrow">
+    <div class="text-center mb-5 reveal">
+      <p class="label">Online rezervace</p>
+      <h2 class="section-title">Objednat vstupenky</h2>
+      <p class="mt-3" style="color:var(--sand);">
+        Vyplňte formulář a vstupenky budou připraveny na pokladně.
+        Potvrzení obdržíte e-mailem.
+      </p>
+    </div>
+
+    <div class="row g-5">
+
+      <!-- Formulář -->
+      <div class="col-lg-7 reveal">
+        <div class="form-wrapper">
+
+          <!-- Zpráva o úspěchu (skrytá dokud formulář není odeslán) -->
+          <div id="reservation-success" style="display:none; text-align:center; padding:var(--space-lg) 0;">
+            <i class="bi bi-check-circle" style="font-size:3rem; color:var(--sage);"></i>
+            <h3 style="color:var(--cream); margin-top:1rem;">Rezervace přijata!</h3>
+            <p style="color:var(--sand);">Potvrzení bylo odesláno na váš e-mail.</p>
+          </div>
+
+          <!-- Samotný formulář -->
+          <form id="reservation-form" novalidate autocomplete="off">
+
+            <!-- Osobní údaje -->
+            <h4 style="color:var(--sand); font-family:var(--font-mono); font-size:0.75rem; letter-spacing:0.2em; text-transform:uppercase; margin-bottom:var(--space-sm);">
+              01 / Osobní údaje
+            </h4>
+
+            <div class="row g-3 mb-4">
+              <div class="col-sm-6">
+                <label class="form-label-stone" for="res-name">Jméno a příjmení *</label>
+                <input type="text" id="res-name" name="name"
+                       class="form-control-stone" placeholder="Jan Novák"
+                       required minlength="2" maxlength="80">
+                <span class="form-error-msg">Vyplňte jméno (min. 2 znaky).</span>
+              </div>
+              <div class="col-sm-6">
+                <label class="form-label-stone" for="res-email">E-mailová adresa *</label>
+                <input type="email" id="res-email" name="email"
+                       class="form-control-stone" placeholder="jan@example.cz"
+                       required>
+                <span class="form-error-msg">Zadejte platnou e-mailovou adresu.</span>
+              </div>
+              <div class="col-sm-6">
+                <label class="form-label-stone" for="res-phone">Telefon</label>
+                <input type="tel" id="res-phone" name="phone"
+                       class="form-control-stone" placeholder="+420 777 888 999">
+                <span class="form-error-msg">Neplatný formát telefonu.</span>
+              </div>
+            </div>
+
+            <!-- Návštěva -->
+            <h4 style="color:var(--sand); font-family:var(--font-mono); font-size:0.75rem; letter-spacing:0.2em; text-transform:uppercase; margin-bottom:var(--space-sm); margin-top:var(--space-md);">
+              02 / Datum a čas návštěvy
+            </h4>
+
+            <div class="row g-3 mb-4">
+              <div class="col-sm-6">
+                <label class="form-label-stone" for="res-date">Datum návštěvy *</label>
+                <input type="date" id="res-date" name="visit_date"
+                       class="form-control-stone" required>
+                <span class="form-error-msg">Vyberte datum návštěvy.</span>
+              </div>
+              <div class="col-sm-6">
+                <label class="form-label-stone" for="res-time">Čas vstupu *</label>
+                <select id="res-time" name="visit_time" class="form-control-stone" required>
+                  <option value="">— Vyberte čas —</option>
+                  <option value="09:00">09:00</option>
+                  <option value="10:00">10:00</option>
+                  <option value="11:00">11:00</option>
+                  <option value="12:00">12:00</option>
+                  <option value="13:00">13:00</option>
+                  <option value="14:00">14:00</option>
+                  <option value="15:00">15:00</option>
+                  <option value="16:00">16:00</option>
+                  <option value="17:00">17:00 (poslední vstup)</option>
+                </select>
+                <span class="form-error-msg">Vyberte čas vstupu.</span>
+              </div>
+            </div>
+
+            <!-- Vstupenky -->
+            <h4 style="color:var(--sand); font-family:var(--font-mono); font-size:0.75rem; letter-spacing:0.2em; text-transform:uppercase; margin-bottom:var(--space-sm); margin-top:var(--space-md);">
+              03 / Vstupenky
+            </h4>
+
+            <div class="row g-3 mb-4">
+              <div class="col-sm-6">
+                <label class="form-label-stone" for="res-ticket-type">Typ vstupenky *</label>
+                <select id="res-ticket-type" name="ticket_type" class="form-control-stone" required>
+                  <option value="">— Vyberte typ —</option>
+                  <option value="standard">Standardní — 250 Kč</option>
+                  <option value="senior">Senior (65+) — 150 Kč</option>
+                  <option value="student">Student — 180 Kč</option>
+                  <option value="family">Rodinná (2+2) — 700 Kč</option>
+                  <option value="premium">Prémiová — 450 Kč</option>
+                </select>
+                <span class="form-error-msg">Vyberte typ vstupenky.</span>
+              </div>
+              <div class="col-sm-6">
+                <label class="form-label-stone" for="res-count">Počet osob *</label>
+                <div class="ticket-counter">
+                  <button type="button" id="count-minus" aria-label="Snížit počet">−</button>
+                  <input type="number" id="res-count" name="count"
+                         value="1" min="1" max="20" required readonly>
+                  <button type="button" id="count-plus" aria-label="Zvýšit počet">+</button>
+                </div>
+              </div>
+              <div class="col-12">
+                <label class="form-label-stone" for="res-note">Poznámka (volitelné)</label>
+                <textarea id="res-note" name="note"
+                          class="form-control-stone" rows="3"
+                          placeholder="Speciální požadavky, bezbariérový přístup, skupinová prohlídka…"
+                          maxlength="500"></textarea>
+              </div>
+            </div>
+
+            <!-- Submit -->
+            <button type="submit" class="btn-stone btn-stone-filled w-100 justify-content-center" style="padding:1rem;">
+              <i class="bi bi-check2-circle me-2"></i>
+              Odeslat rezervaci
+            </button>
+
+            <p class="mt-3" style="font-size:0.75rem; color:rgba(207,187,153,.5); font-family:var(--font-mono); letter-spacing:0.05em;">
+              Odesláním souhlasíte se zpracováním osobních údajů za účelem vyřízení rezervace.
+            </p>
+          </form>
+        </div><!-- /.form-wrapper -->
+      </div><!-- /col -->
+
+      <!-- Shrnutí objednávky -->
+      <div class="col-lg-5 reveal reveal-delay-2">
+        <div class="order-summary mb-4" style="position:sticky; top:calc(var(--nav-height) + 1.5rem);">
+          <h4>Shrnutí objednávky</h4>
+          <div id="summary-details">
+            <!-- Generuje JS po vyplnění formuláře -->
+            <p style="color:rgba(207,187,153,.4); font-size:0.875rem;">Vyplňte formulář pro zobrazení shrnutí.</p>
+          </div>
+          <div class="order-total mt-3">
+            <span>Celkem</span>
+            <span id="total-price">0 Kč</span>
+          </div>
+        </div>
+
+        <!-- Info box -->
+        <div style="border:1px solid rgba(136,144,99,.2); padding:var(--space-sm); margin-top:var(--space-sm);">
+          <p class="label" style="color:var(--sage);">Informace</p>
+          <ul style="list-style:none; padding:0;">
+            <li style="color:var(--sand); font-size:0.875rem; margin-bottom:0.5rem;">
+              <i class="bi bi-info-circle me-2" style="color:var(--sage);"></i>
+              Rezervace je nezávazná, platba při vstupu.
+            </li>
+            <li style="color:var(--sand); font-size:0.875rem; margin-bottom:0.5rem;">
+              <i class="bi bi-clock me-2" style="color:var(--sage);"></i>
+              Rezervaci lze zrušit 24 h před návštěvou.
+            </li>
+            <li style="color:var(--sand); font-size:0.875rem;">
+              <i class="bi bi-envelope me-2" style="color:var(--sage);"></i>
+              Potvrzení obdržíte e-mailem do 5 minut.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div><!-- /.row -->
+  </div>
+</section>
+
+
+<!-- ============================================================
+     9. RECENZE NÁVŠTĚVNÍKŮ
+     ============================================================ -->
+<section id="reviews" class="bg-white">
+  <div class="container-fluid-narrow">
+    <div class="text-center mb-5 reveal">
+      <p class="label">Návštěvníci o nás</p>
+      <h2 class="section-title">Recenze</h2>
+    </div>
+
+    <div class="row g-4">
+
+      <!-- Recenze 1 -->
+      <div class="col-md-6 col-lg-4 reveal reveal-delay-1">
+        <div class="review-card">
+          <div class="review-stars" aria-label="Hodnocení 5 z 5">
+            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+          </div>
+          <p class="review-text">
+            Neuvěřitelný zážitek. Sakrální část muzea mě dojala k slzám — osvětlení,
+            ticho, váha kamene. Nikde jinde jsem nic podobného nezažila.
+          </p>
+          <div class="review-author">
+            <div class="review-avatar" aria-hidden="true">M</div>
+            <div>
+              <div class="review-name">Markéta Horáčková</div>
+              <div class="review-date">Návštěva: duben 2025</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Recenze 2 -->
+      <div class="col-md-6 col-lg-4 reveal reveal-delay-2">
+        <div class="review-card">
+          <div class="review-stars" aria-label="Hodnocení 5 z 5">
+            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+          </div>
+          <p class="review-text">
+            Iron Cathedral je jedna z nejsilnějších instalací, které jsem kdy viděl.
+            Průvodce byl skvěle připraven, komentáře k historii brutalismu opravdu hluboké.
+          </p>
+          <div class="review-author">
+            <div class="review-avatar" aria-hidden="true">T</div>
+            <div>
+              <div class="review-name">Tomáš Blažek</div>
+              <div class="review-date">Návštěva: březen 2025</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Recenze 3 -->
+      <div class="col-md-6 col-lg-4 reveal reveal-delay-3">
+        <div class="review-card">
+          <div class="review-stars" aria-label="Hodnocení 4 z 5">
+            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            <i class="bi bi-star"></i>
+          </div>
+          <p class="review-text">
+            Přijeli jsme s celou rodinou. Děti bavil dětský průvodce, my s manželem jsme
+            si užili audiodůvodce u Marble Wounds. Réservacie přes web proběhla bez problémů.
+          </p>
+          <div class="review-author">
+            <div class="review-avatar" aria-hidden="true">L</div>
+            <div>
+              <div class="review-name">Lucie Procházková</div>
+              <div class="review-date">Návštěva: únor 2025</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Recenze 4 -->
+      <div class="col-md-6 col-lg-4 reveal reveal-delay-1">
+        <div class="review-card">
+          <div class="review-stars" aria-label="Hodnocení 5 z 5">
+            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+          </div>
+          <p class="review-text">
+            Ekspozycja „Obsidian Myths" przekroczyła wszystkie moje oczekiwania.
+            Doskonała curation, piękne oświetlenie. Wracam tu za rok!
+          </p>
+          <div class="review-author">
+            <div class="review-avatar" aria-hidden="true">A</div>
+            <div>
+              <div class="review-name">Agnieszka Wiśniewska</div>
+              <div class="review-date">Návštěva: leden 2025 · Polsko</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Recenze 5 -->
+      <div class="col-md-6 col-lg-4 reveal reveal-delay-2">
+        <div class="review-card">
+          <div class="review-stars" aria-label="Hodnocení 5 z 5">
+            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+          </div>
+          <p class="review-text">
+            Jdu sem pokaždé, když přijedu do Prahy. Prémiová vstupenka se opravdu vyplácí —
+            přístup do všech expozic a komentovaná prohlídka za skvělou cenu.
+          </p>
+          <div class="review-author">
+            <div class="review-avatar" aria-hidden="true">P</div>
+            <div>
+              <div class="review-name">Petr Souček</div>
+              <div class="review-date">Opakovaná návštěva · Praha</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Recenze 6 -->
+      <div class="col-md-6 col-lg-4 reveal reveal-delay-3">
+        <div class="review-card">
+          <div class="review-stars" aria-label="Hodnocení 4 z 5">
+            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            <i class="bi bi-star"></i>
+          </div>
+          <p class="review-text">
+            As an architecture student, this museum is an absolute must-visit.
+            The Concrete Cathedrals section alone is worth the trip to Prague.
+          </p>
+          <div class="review-author">
+            <div class="review-avatar" aria-hidden="true">J</div>
+            <div>
+              <div class="review-name">James Thornton</div>
+              <div class="review-date">Návštěva: prosinec 2024 · UK</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /.row -->
+  </div>
+</section>
+
+
+<!-- ============================================================
+     10. FAQ (Často kladené dotazy)
+     ============================================================ -->
+<section id="faq" class="bg-cream">
+  <div class="container-fluid-narrow">
+    <div class="row">
+      <div class="col-lg-5 mb-4 mb-lg-0 reveal">
+        <p class="label">Dotazy</p>
+        <h2 class="section-title">Časté otázky</h2>
+        <p class="mt-3" style="color:#5a4a2a;">
+          Nenašli jste odpověď? Kontaktujte nás e-mailem nebo telefonicky.
+        </p>
+        <a href="#contact" class="btn-stone mt-4">
+          <i class="bi bi-envelope"></i>
+          Kontaktovat
+        </a>
+      </div>
+
+      <div class="col-lg-7 reveal reveal-delay-2">
+        <div class="faq-list">
+
+          <div class="faq-item">
+            <div class="faq-question">
+              Jak dlouho trvá prohlídka muzea?
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </div>
+            <div class="faq-answer">
+              Průměrná prohlídka stálých expozic trvá 1,5–2 hodiny. S prémiovou výstavou
+              a komentovanou prohlídkou počítejte s 3–4 hodinami. Muzeum je otevřeno
+              do 18:00 (poslední vstup 17:00).
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              Je muzeum přístupné pro osoby se zdravotním postižením?
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </div>
+            <div class="faq-answer">
+              Ano. Celé muzeum je bezbariérové — výtahy, rampy, speciální toalety.
+              Vstup pro držitele průkazu ZTP a jejich průvodce je zdarma.
+              Audioprůvodce je dostupný i v češtině pro zrakově postižené.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              Mohu fotit v muzeu?
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </div>
+            <div class="faq-answer">
+              Fotografování pro osobní účely je ve stálých expozicích povoleno (bez blesku).
+              Ve speciálních výstavách může platit zákaz — vždy sledujte piktogramy
+              u vstupu do konkrétního sálu.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              Jak zrušit nebo změnit rezervaci?
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </div>
+            <div class="faq-answer">
+              Rezervaci lze bezplatně zrušit nebo přesunout nejpozději 24 hodin před
+              plánovanou návštěvou. Pište na rezervace@monolith-museum.cz nebo volejte
+              +420 222 333 444. Do předmětu e-mailu uveďte číslo rezervace.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              Je možné objednat skupinovou / školní prohlídku?
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </div>
+            <div class="faq-answer">
+              Skupiny nad 10 osob objednávejte předem e-mailem (skupiny@monolith-museum.cz).
+              Pro školy nabízíme speciální výukové programy a zvýhodněné vstupné.
+              Lektor mluvící česky, anglicky nebo německy.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              Kde zaparkovat?
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </div>
+            <div class="faq-answer">
+              Doporučujeme cestovat MHD (stanice Staroměstská, metro A, 3 min pěšky).
+              Nejbližší parkoviště: Palladium (cca 600 m), parkoviště Kotva (800 m).
+              Cyklisté mohou kola uzamknout u stojanu u hlavního vstupu.
+            </div>
+          </div>
+
+        </div><!-- /.faq-list -->
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     11. KONTAKTY & MAPA
+     ============================================================ -->
+<section id="contact">
+  <div class="container-fluid-narrow">
+    <div class="text-center mb-5 reveal">
+      <p class="label">Najděte nás</p>
+      <h2 class="section-title">Kontakt</h2>
+    </div>
+
+    <div class="row g-5">
+
+      <!-- Kontaktní údaje -->
+      <div class="col-lg-4 reveal">
+
+        <div class="contact-detail">
+          <div class="contact-icon"><i class="bi bi-geo-alt-fill"></i></div>
+          <div>
+            <p class="contact-label">Adresa</p>
+            <p class="contact-value">Staroměstské náměstí 12<br>110 00 Praha 1 — Staré Město</p>
+          </div>
+        </div>
+
+        <div class="contact-detail">
+          <div class="contact-icon"><i class="bi bi-telephone-fill"></i></div>
+          <div>
+            <p class="contact-label">Telefon</p>
+            <a href="tel:+420222333444" class="contact-value">+420 222 333 444</a>
+          </div>
+        </div>
+
+        <div class="contact-detail">
+          <div class="contact-icon"><i class="bi bi-envelope-fill"></i></div>
+          <div>
+            <p class="contact-label">E-mail</p>
+            <a href="mailto:info@monolith-museum.cz" class="contact-value">info@monolith-museum.cz</a>
+          </div>
+        </div>
+
+        <!-- Otevírací hodiny -->
+        <p class="label mt-4 mb-3">Otevírací hodiny</p>
+        <table class="hours-table">
+          <tr>
+            <td class="day">Po – Čt</td>
+            <td class="time">09:00 – 18:00</td>
+          </tr>
+          <tr>
+            <td class="day">Pá</td>
+            <td class="time">09:00 – 20:00</td>
+          </tr>
+          <tr>
+            <td class="day">So – Ne</td>
+            <td class="time">10:00 – 19:00</td>
+          </tr>
+          <tr>
+            <td class="day">Svátky</td>
+            <td class="time closed">Zavřeno</td>
+          </tr>
+        </table>
+
+        <!-- Social links -->
+        <div class="mt-4">
+          <p class="label mb-3">Sledujte nás</p>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Instagram">
+              <i class="bi bi-instagram"></i>
+            </a>
+            <a href="#" class="social-link" aria-label="Facebook">
+              <i class="bi bi-facebook"></i>
+            </a>
+            <a href="#" class="social-link" aria-label="YouTube">
+              <i class="bi bi-youtube"></i>
+            </a>
+          </div>
+        </div>
+
+      </div><!-- /col -->
+
+      <!-- Mapa -->
+      <div class="col-lg-8 reveal reveal-delay-2">
+        <div class="map-placeholder">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2559.9856!2d14.4213!3d50.0875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470b94e7d3f8c2d5%3A0x1234567890abcdef!2sStar%C3%A9%20M%C4%9Bsto%2C%20Prague!5e0!3m2!1scs!2scz!4v1620000000000!5m2!1scs!2scz"
+            width="100%"
+            height="320"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Mapa — MONOLITH Museum, Staroměstské náměstí 12, Praha 1">
+          </iframe>
+        </div>
+
+        <!-- Transport info -->
+        <div class="row g-3 mt-3">
+          <div class="col-sm-4">
+            <div style="background:rgba(255,255,255,.05); border:1px solid rgba(136,144,99,.2); padding:1rem;">
+              <p class="label mb-1"><i class="bi bi-train-front me-1"></i>Metro</p>
+              <p style="color:var(--cream); font-size:0.875rem;">
+                Staroměstská (A)<br>3 min pěšky
+              </p>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div style="background:rgba(255,255,255,.05); border:1px solid rgba(136,144,99,.2); padding:1rem;">
+              <p class="label mb-1"><i class="bi bi-bus-front me-1"></i>Tramvaj</p>
+              <p style="color:var(--cream); font-size:0.875rem;">
+                Staroměstské nám. (2, 17, 18)<br>1 min pěšky
+              </p>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div style="background:rgba(255,255,255,.05); border:1px solid rgba(136,144,99,.2); padding:1rem;">
+              <p class="label mb-1"><i class="bi bi-bicycle me-1"></i>Kolo</p>
+              <p style="color:var(--cream); font-size:0.875rem;">
+                Nextbike stanice<br>u hlavního vstupu
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /.row -->
+  </div>
+</section>
+
+
+<!-- ============================================================
+     12. FOOTER
+     ============================================================ -->
+<footer>
+  <div class="container-fluid-narrow">
+    <div class="row g-5">
+
+      <!-- O muzeu -->
+      <div class="col-md-4">
+        <div class="footer-logo">MONOLITH</div>
+        <div class="footer-slogan">Read the Stone.</div>
+        <p style="font-size:0.875rem; opacity:.6; max-width:36ch;">
+          Muzeum monumentálního sochařství, brutalismu a sakrálního umění.
+          Díváme se pod povrch kamene od roku 1994.
+        </p>
+      </div>
+
+      <!-- Navigace -->
+      <div class="col-md-2 col-sm-6">
+        <p class="footer-heading">Muzeum</p>
+        <a class="footer-link" href="#current-exhibitions">Výstavy</a>
+        <a class="footer-link" href="#expositions">Expozice</a>
+        <a class="footer-link" href="#tickets">Vstupné</a>
+        <a class="footer-link" href="#reservation">Rezervace</a>
+        <a class="footer-link" href="#contact">Kontakt</a>
+      </div>
+
+      <!-- Info -->
+      <div class="col-md-2 col-sm-6">
+        <p class="footer-heading">Info</p>
+        <a class="footer-link" href="#faq">FAQ</a>
+        <a class="footer-link" href="#">Skupinové prohlídky</a>
+        <a class="footer-link" href="#">Vzdělávací programy</a>
+        <a class="footer-link" href="#">Katalogy (PDF)</a>
+        <a class="footer-link" href="#">Press</a>
+      </div>
+
+      <!-- Kontakt -->
+      <div class="col-md-4">
+        <p class="footer-heading">Kontakt</p>
+        <p style="font-size:0.875rem; opacity:.6; margin-bottom:0.5rem;">
+          Staroměstské náměstí 12, Praha 1
+        </p>
+        <a href="tel:+420222333444" class="footer-link">+420 222 333 444</a>
+        <a href="mailto:info@monolith-museum.cz" class="footer-link">info@monolith-museum.cz</a>
+
+        <div class="social-links mt-3">
+          <a href="#" class="social-link" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="social-link" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="social-link" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+        </div>
+      </div>
+
+    </div>
+
+    <hr class="footer-divider">
+
+    <div class="footer-bottom">
+      <span>© 2025 MONOLITH Museum, z.ú. Všechna práva vyhrazena.</span>
+      <div style="display:flex; gap:1.5rem; flex-wrap:wrap;">
+        <a href="#" style="color:inherit; opacity:.7; transition:opacity 0.2s;">Ochrana osobních údajů</a>
+        <a href="#" style="color:inherit; opacity:.7; transition:opacity 0.2s;">Podmínky použití</a>
+        <a href="#" style="color:inherit; opacity:.7; transition:opacity 0.2s;">Cookie politika</a>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+
+<!-- ============================================================
+     MODÁLNÍ OKNO — Potvrzení rezervace
+     ============================================================ -->
+<div class="modal fade" id="confirmModal" tabindex="-1" aria-labelledby="confirmModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header border-0">
+        <h5 class="modal-title" id="confirmModalLabel" style="font-family:var(--font-display); color:var(--cream);">
+          Potvrdit rezervaci
+        </h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Zavřít"></button>
+      </div>
+      <div class="modal-body" id="confirm-modal-body">
+        <!-- Obsah generuje JavaScript -->
+      </div>
+      <div class="modal-footer border-0">
+        <button type="button" class="btn-stone btn-stone-light" data-bs-dismiss="modal">
+          Upravit
+        </button>
+        <button type="button" id="confirm-reservation-btn" class="btn-stone" style="border-color:var(--sage); color:var(--sage); background:transparent;">
+          <i class="bi bi-check2 me-1"></i>Potvrdit
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ============================================================
+     SKRIPTY — Bootstrap + vlastní JS
+     ============================================================ -->
+<!-- Bootstrap 5 JS Bundle (zahrnuje Popper.js) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Data expozic převedená z CSV -->
+<script src="js/expositionsData.js"></script>
+
+<!-- Hlavní aplikační skript -->
+<script src="js/main.js"></script>
+
+</body>
+</html>
