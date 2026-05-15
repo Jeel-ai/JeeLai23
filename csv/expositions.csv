@@ -1,0 +1,9 @@
+id,name,description,category,image,room,year
+1,"Brutalist Monoliths","Masivní betonové formy z poválečné éry – architektura jako výraz moci a melanchonie.","Brutalismus","images/expo1.svg","Sál A",1968
+2,"Sacral Stone","Oltářní kameny, křestní fonty a reliéfy z románských kostelů Evropy.","Sakrální umění","images/expo2.svg","Sál B",1220
+3,"Bronze Rituals","Ceremoniální bronzové sochy z doby železné – rituál, smrt a znovuzrození.","Bronzové sochařství","images/expo3.svg","Sál C",800
+4,"The Column Project","Monolitické sloupy od antiky po modernismus – tvar, který nese nebe.","Architektura","images/expo4.svg","Sál D",1920
+5,"Marble Wounds","Detailní záznamy ran, prasklin a erozí v mramoru – čas jako sochař.","Mramorové sochařství","images/expo5.svg","Sál E",2020
+6,"Concrete Cathedrals","Le Corbusier, Tadao Ando a další – posvátné prostory z holého betonu.","Brutalismus","images/expo6.svg","Sál F",1955
+7,"Obsidian Myths","Mayské a aztécké obsidiánové skulptury – temnota jako posvátná hmota.","Prekolumbovské umění","images/expo7.svg","Sál G",600
+8,"The Weight of Stone","Site-specific instalace současných sochařů reagujících na architekturu muzea.","Současné umění","images/expo8.svg","Atrium",2024
