@@ -895,3 +895,12 @@ footer
 .footer-bottom{display:block}
 .hero-title{
   font-size:4.5rem}}
+
+.order-summary
+{
+  background: rgba(255,255,255,.05);
+  border: 1px solid rgba(207,187,153,.18);
+  padding: 1.5rem;
+  height: auto;
+  min-height: unset;
+}
